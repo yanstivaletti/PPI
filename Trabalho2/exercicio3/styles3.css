@@ -1,0 +1,54 @@
+*{
+    margin: 0px;
+}
+body {
+    background-image: url(bg1.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+nav {
+    background-color: black;
+    word-spacing: 50px;
+    border:none;
+    color:white;
+    font-size: 20px;
+    font-family: Helvetica, sans-serif;
+    padding:0 2rem 1.5rem;
+    text-align: center;
+    
+}
+a {
+	padding: 10px;
+	text-decoration: none;
+	color:#FFFF;
+    align-items: center;
+
+}
+.imagens {
+    font-family: Helvetica;
+    background-color: white;
+    width: 1200px; 
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+    
+   
+}
+h2 {
+    color:gray;
+}
+img {
+    max-height: 150px;
+    max-width: 200px;
+    width: 350px;
+    height: 350px;
+    margin: 25px;
+    border-radius: 10px;
+
+}
+
+.descricao p,h2,h3 {
+    margin: 10px;
+}

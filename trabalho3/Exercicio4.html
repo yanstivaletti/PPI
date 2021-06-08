@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <title>Login</title>
+    <style>
+        body {
+            background-image: url(bg1.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+       .loginBox {
+        background-color:  white;
+        left:50%;
+        top:50%;
+        margin-left:-250px;
+        margin-top:-100px;
+        width:300px;
+        height:400px;
+        position:absolute;
+        padding: 2rem;
+        border: 1px solid gray;
+        border-radius: 1rem;
+        align-items: center;
+        font-weight: 700;
+           
+       }
+       .loginBox h3,div,label,input {
+           background-color: white;
+       } 
+       span {
+           background-color: white;
+           color: red;
+           font-weight: 50;
+           font-size: small;
+
+       }
+       button {
+           background-color: white;
+       }
+       label {
+           font-size: small;
+           font-weight: 100;
+       }
+       input {
+           border-radius: 5px;
+           
+       }
+       
+
+    </style>
+    </head>
+
+        <body>
+            <main>
+                <div class = "loginBox">
+                    <h3>Cadastro de Usuario</h3>
+
+                    <form name = "formCadastro" action = "action.php" method="post">
+
+                        <div>
+                            <label for = "usuario">Usuario:</label>
+                            <p></p>
+                            <input type = "text" id = "usuario" name = "usuario" autocomplete = "off">
+                            <span></span>
+                        </div>
+
+                        <div>
+                            <label for = "senha">Senha:</label>
+                            <p></p>
+                            <input type = "password" id = "senha" name = "senha">
+                            <span></span>
+                        </div>
+
+                        <div>
+                            <label for = "email">Email:</label>
+                            <p></p>
+                            <input type = "email" id = "email" name = "email" autocomplete = "off">
+                            <span></span>
+                        </div>
+                        <div>
+                        <button>Cadastrar</button>
+                        </div>
+                    </form>
+            
+                </div>
+            </main>
+
+        <script type = "text/javascript">
+                        
+            window.onload = function () {
+                document.forms.formCadastro.onsubmit = validaForm;  // acessa o formulario e ativa a função valida form
+                
+            }
+            function validaForm(e) {
+                let form = e.target;                    
+                let formValido = true;
+
+                const spanUsuario = form.usuario.nextElementSibling;    //Acessa os spans que estão abaixo do input
+                const spanSenha = form.senha.nextElementSibling;
+                const spanEmail = form.email.nextElementSibling;
+
+                spanUsuario.textContent = "";       //Declaramos as variaveis para preencher os spans
+                spanSenha.textContent = "";
+                spanEmail.textContent = "";
+
+                if(form.usuario.value === ""){              // Caso o usuario não preencha o campo, sera mostrado o valor de Span
+                    spanUsuario.textContent = 'O usuario deve ser informado';
+                    formValido = false;
+                }
+                if(form.senha.value === ""){
+                    spanSenha.textContent = 'A senha deve ser informada';
+                    formValido = false;
+                }
+                if(form.email.value === ""){
+                    spanEmail.textContent = 'O email deve ser informado';
+                    formValido = false;
+                }
+
+                return formValido;          // retorna o formulario
+
+            }
+
+        </script>
+        </body>
+
+</html>

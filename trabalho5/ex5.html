@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>ex3</title>
+    <style>
+
+    .container {
+    background-color:  white;
+    font-family: Helvetica;
+    left:50%;
+    top:50%;
+    margin-left:-250px;
+    margin-top:-100px;
+    width:500px;
+    height:200px;
+    position:absolute;
+    padding: 2rem;
+    border: 1px solid gray;
+    border-radius: 1rem;
+    align-items: center;
+    font-weight: 700;
+}
+
+    body{
+        background-color: rgb(241, 238, 238);
+    }
+
+    input[type=text]:focus {
+        border: 5px solid rgb(255, 0, 234);
+    }
+    </style>
+  </head>
+  <body>
+    
+    <main>
+        <form action = "ex5.php" method = "POST">
+
+            <div class = "container">
+                <div>
+                    <label for = "nome">Email:</label>
+                    <p></p>
+                    <input type="text" name = "email" id = "nome" maxlength="60" size="60">
+                    <p></p>
+                </div>
+                
+                <div>
+                    <label for = "email">Senha:</label>
+                    <p></p>
+                    <input type="password" name = "password" id = "email" maxlength="60" size="60">
+                    <p></p>
+                </div>
+
+                <input type="submit" name="enviar" value="Enviar">
+            </div>  
+
+        </form>
+    <footer></footer>
+  </main>
+  </body>
+</html>

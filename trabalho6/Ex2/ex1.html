@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+	<title>ex1</title>
+	<meta name = "viewport" content = "width = devide-widthz, initial-scale = 1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body>
+<main>
+    
+        <form action = "ex1.php" method = "POST">
+        <div class = "col-md">
+			<label for = "inputCEP" class = "form-label">CEP</label>
+			<input type = "number" name = "cep" class = "form-control" id = "inputCEP">
+		</div>
+
+		<div class = "col-md">
+			<label for = "inputLogadrouro" class = "form-label">Logradouro</label>
+			<input type = "text" name = "lugradouro" class = "form-control" id = "inputLogradouro">
+		</div>
+
+        <div class = "col-md">
+			<label for = "inputBairro" id = "inputBairro" class = "form-label">Bairro</label>
+            <input type = "text" name = "bairro" class = "form-control" id = "inputBairro">
+		</div>
+
+        <div class = "row g-2">
+        <div class = "col-md-6">
+            <label for = "inputCidade" id = "inputCidade" class = "form-label">Cidade</label>
+            <input type = "text"  name = "cidade" class = "form-control" id = "inputCidade">
+		</div>
+
+		<div class = "col-md-6">
+			<label for = "inputEstado" class = "form-label">Estado</label>
+			<select class = "form-control" name = "estado" id = "inputEstado">
+            <option selected> Sel. </option>
+            <option>MG</option>
+            <option>SP</option>
+            <option>RJ</option>
+            <option>ES</option>
+            </select>
+		</div>
+        </div>
+
+        <div class = "col-md">
+            <div class = "form-check">
+                <input class = "form-check-input" type = "checkbox" id = "termos">
+                <label class = "form-check-label" for = "termos">Concordo com os termos</label>
+            </div>
+        </div>
+
+        <div class = "col-12">
+          
+            <button type = "submit" class = "btn btn-primary">  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-square-fill" viewBox="0 0 16 16">
+                 <path d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0z"/>
+                </svg> Cadastrar</button>
+        </div>
+	</form>
+</main>
+</body>
+</html>

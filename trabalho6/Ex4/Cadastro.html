@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>ex3</title>
+    <style>
+
+    .container {
+    background-color:  white;
+    font-family: Helvetica;
+    left:50%;
+    top:50%;
+    margin-left:-250px;
+    margin-top:-100px;
+    width:500px;
+    height:200px;
+    position:absolute;
+    padding: 2rem;
+    border: 1px solid gray;
+    border-radius: 1rem;
+    align-items: center;
+    font-weight: 700;
+}
+
+    body{
+        background-color: rgb(241, 238, 238);
+    }
+
+    input[type=text]:focus {
+        border: 5px solid rgb(255, 0, 234);
+    }
+    </style>
+  </head>
+  <body>
+    
+    <main>
+        <form action = "cadastro.php" method = "POST">
+
+            <div class = "container">
+                <div>
+                    <label for = "nome">Nome:</label>
+                    <p></p>
+                    <input type="text" name = "nome" id = "nome" maxlength="60" size="60">
+                    <p></p>
+                </div>
+                
+                <div>
+                    <label for = "sexo">Sexo:</label>
+                    <p></p>
+                    <input type="text" name = "sexo" id = "sexo" maxlength="60" size="60">
+                    <p></p>
+                </div>
+                 <div>
+                    <label for = "email">Email:</label>
+                    <p></p>
+                    <input type="email" name = "email" id = "email" maxlength="60" size="60">
+                    <p></p>
+                </div>
+
+                <div>
+                    <label for = "telefone">Telefone:</label>
+                    <p></p>
+                    <input type="number" name = "password" id = "telefone" maxlength="60" size="60">
+                    <p></p>
+                </div>
+
+                <div>
+                    <label for = "cep">CEP:</label>
+                    <p></p>
+                    <input type="text" name = "cep" id = "cep" maxlength="60" size="60">
+                    <p></p>
+                </div>
+                <div>
+                    <label for = "logradouro">Logradouro</label>
+                    <p></p>
+                    <input type="text" name = "logradouro" id = "logradouro" maxlength="60" size="60">
+                    <p></p>
+                </div>
+                <div>
+                    <label for = "cidade">Cidade</label>
+                    <p></p>
+                    <input type="text" name = "cidade" id = "cidade" maxlength="60" size="60">
+                    <p></p>
+                </div>
+                <div>
+                    <label for = "estado">Estado</label>
+                    <p></p>
+                    <input type="text" name = "estado" id = "estado" maxlength="60" size="60">
+                    <p></p>
+                </div>
+                <div>
+                    <label for = "peso">Peso</label>
+                    <p></p>
+                    <input type="text" name = "peso" id = "peso" maxlength="60" size="60">
+                    <p></p>
+                </div>
+                <div>
+                    <label for = "altura">Altura</label>
+                    <p></p>
+                    <input type="text" name = "altura" id = "altura" maxlength="60" size="60">
+                    <p></p>
+                </div>
+                <div>
+                    <label for = "ts">Tipo Sanguineo</label>
+                    <p></p>
+                    <input type="text" name = "ts" id = "ts" maxlength="60" size="60">
+                    <p></p>
+                </div>
+
+
+                <input type="submit" name="enviar" value="Enviar">
+            </div>  
+
+        </form>
+
+    <footer></footer>
+  </main>
+  </body>
+</html>

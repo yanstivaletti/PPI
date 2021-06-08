@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <title>Faculdade de Computação</title>
+    <style>
+        *{
+            margin: 0px;
+        }
+        header {
+            background-color: black;
+            border:none;
+            color:white;
+            text-align: center;
+
+            font-size: 25px;
+            font-family: Helvetica, sans-serif;
+            padding:0 2rem 1.5rem;
+            border-bottom: 1px solid gray;
+        }
+        nav {
+            background-color: gray;
+            display: flex;
+            
+        }
+        li {
+            display: inline;
+            text-align: center;
+            float:left;
+        }
+        nav button {
+            border:none;
+            background-color: gray;
+            color: white;
+            padding: 15px 32px;
+            display: inline-block;
+            font-size: 16px;
+            display:block;
+            text-align:center;
+            text-decoration:none; 
+
+        }
+        nav button:hover {
+            color: blue;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        button.buttonActive {
+            font-weight: bold;
+            color: blue;
+        }
+
+        .tabs section {
+            display: none;
+        }
+        div{
+            width: 500px; 
+            margin-left: auto;
+            margin-right: auto;
+            padding: 2rem;
+            border: 1px;
+            box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.5);
+        }
+        section {
+            text-align: center;
+
+        }
+        section.tabActive {
+            display: block;
+        }
+
+    </style>
+    </head>
+
+        <body>
+            <header>
+                <section>
+                    <h1>Faculdade De Computação</h1>
+                </section>
+            </header>
+            <nav> 
+                <section>
+                    <ul>
+                        <li><button>Ciencias da Computação</button></li>
+                        <li><button>Sistemas de Informação</button></li>
+                        <li><button>Mestrado</button></li>
+                        <li><button>Doutorado</button></li>
+                    </ul>
+                </section>
+            </nav>
+            <main>
+                <div class = "tabs">
+                    <section>
+                        Lorem ipsum pharetra donec aliquam curabitur congue dolor tortor litora,
+                        ut aliquet lacus imperdiet viverra etiam posuere imperdiet condimentum cubilia,
+                        in gravida mattis morbi lacus arcu sed netus. nisl praesent odio suspendisse luctus ac quisque,
+                        platea mollis ligula leo curae, eleifend consectetur ornare rutrum eu.
+                            eget platea donec dui consequat quisque magna euismod dictumst conubia,
+                            curae eros morbi hendrerit mattis non conubia interdum,
+                            tempor rhoncus quam morbi etiam curabitur ultricies nunc.
+                            torquent et vestibulum per justo interdum mi augue tempor odio congue,
+                                dolor mauris cursus elementum eros mollis curabitur condimentum.
+                    </section>
+                         
+                    <section>
+                        Porttitor molestie augue venenatis maecenas rhoncus justo morbi,
+                         aliquam varius morbi massa at sodales lacinia eleifend, 
+                         pellentesque consequat rutrum suscipit urna gravida.
+                          est interdum neque hendrerit vitae habitant malesuada eu per, 
+                          cras quam neque libero tristique curabitur lorem id, tortor gravida 
+                          ipsum placerat eros nec phasellus. ullamcorper nisi pharetra facilisis 
+                          ut ultricies ipsum ac platea hac tincidunt, quisque aliquam convallis 
+                          curae suspendisse quisque vivamus massa. erat mollis varius quisque ornare dictumst 
+                          aliquam ullamcorper scelerisque egestas orci sodales pharetra accumsan aliquam,
+                           eros vel suspendisse sapien nisl scelerisque cras quis posuere laoreet velit ut. 
+
+                    </section>
+                    <section>
+                            ros aptent hac placerat phasellus fusce sapien auctor ullamcorper dolor,
+                            fermentum convallis nisl nostra vivamus augue luctus sagittis, ut consectetur 
+                            aliquam porttitor morbi porta interdum tempus. vestibulum lacus habitant est felis
+                            consequat cubilia sem metus varius ac lacus eros, conubia ante aliquam sociosqu augue auctor
+                            curabitur ultricies placerat felis mollis. diam laoreet condimentum porttitor vestibulum venenatis
+                                fames luctus curae volutpat iaculis sagittis, justo nullam rutrum diam pharetra ipsum dictumst luctus 
+                                vitae dapibus. ultricies taciti curabitur elit tincidunt nisi luctus condimentum aptent, proin nullam 
+                                erat phasellus proin nec. ad aenean sem in per, ut metus quisque. 
+                    </section>
+                    <section>
+                        In mi sapien aliquet sem ultricies sodales, adipiscing vulputate quisque cubilia etiam eget torquent, 
+                        interdum metus aenean lacus etiam. tellus litora fringilla at potenti ante risus, cursus condimentum 
+                        turpis ante torquent adipiscing eu, massa erat ultricies sagittis netus. quis class ad donec suscipit 
+                        vivamus vestibulum tincidunt pharetra adipiscing risus mollis aptent, pellentesque proin cursus in 
+                        cursus ligula vivamus sociosqu tortor consequat mauris fringilla, quam class diam sodales vulputate 
+                        luctus ultrices rhoncus sem feugiat adipiscing. in torquent quisque amet metus, vel mauris massa. 
+                        lacinia imperdiet etiam metus senectus inceptos pretium luctus curabitur mi lacinia praesent tempor quam, 
+                        aliquet et sed hendrerit potenti vehicula nisi lacinia duis hac ac nullam. 
+                    </section>
+
+                </div>
+                
+            </main>
+
+        <script type = "text/javascript">
+                        
+            window.onload = function () {
+                
+                buttons = document.querySelectorAll("nav button");  // Seleciona todos os botões dentro da barra de navegação
+                for(let button of buttons) {                        
+                    button.addEventListener("click",changeTab);  
+                }
+                openTab(0);
+            }
+            function changeTab(e){                                  // Tem como papel, encontrar a posição do item de lista dentro da lista
+                const botaoAdicionado = e.target;                   // e. da acesso ao objeto que disparou o evento que levou a chamada da função changeTab
+                const liDoBotao = botaoAdicionado.parentNode;       // Recebe o nó pai para depois acessarmos o filho dele
+                const nodes = Array.from(liDoBotao.parentNode.children);
+                const index = nodes.indexOf(liDoBotao);             // pega a posição de Li que queremos mostrar
+                openTab(index);                                     // Abre a Tab da posição "index"
+            }
+            function openTab(i) {
+                const tabActive = document.querySelector(".tabActive");     //Busca a Tab que esta ativo e a torna invisivel
+                if(tabActive !== null)
+                    tabActive.className = "";
+                
+                const  buttonActive = document.querySelector(".buttonActive"); //Busca o botão que esta ativo e a torna invisivel
+                if(buttonActive !== null)
+                    buttonActive.className = ""; 
+                
+                document.querySelectorAll(".tabs section")[i].className = "tabActive"; // ativa a Tab desejada
+                document.querySelectorAll("nav button")[i].className = "buttonActive"; // ativa o botão desejado
+            }
+
+        </script>
+        </body>
+
+</html>

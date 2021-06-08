@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <title>Web Clinica - Home</title>
+    <style>
+        *{
+            margin: 0px;
+        }
+        body {
+        background-image: url(Background.jpeg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        
+}
+        header {
+            background-color: #00cccc;
+            border:none;
+            color:white;
+
+            font-size: 25px;
+            font-family: Helvetica, sans-serif;
+            padding:0 2rem 1.5rem;
+            border-bottom: 1px solid gray;
+        }
+        nav {
+            background-color: gray;
+            display: flex;
+            
+        }
+        li {
+            display: inline;
+            text-align: center;
+            float:left;
+
+        }
+        nav button {
+            border: solid gray;
+            background-color: gray;
+            color: white;
+            padding: 15px 32px;
+            display: inline-block;
+            font-size: 16px;
+            display:block;
+            text-align:center;
+            text-decoration:none; 
+
+        }
+        .formulario {
+            color:pink;
+
+        }
+        nav button:hover {
+            color: blue;
+            cursor: pointer;
+
+        }
+        button.buttonActive {
+            font-weight: bold;
+            color: blue;
+        }
+        img {
+            max-height: 300px;
+            max-width: 400px;
+            width: 350px;
+            height: 350px;
+            margin: 25px;
+            border-radius: 10px;
+            
+
+        }
+        .tabs section {
+            display: none;
+        }
+        div{
+            background-color: white;
+            width: 1200px; 
+            margin-left: auto;
+            margin-right: auto;
+            padding: 2rem;
+            border: 1px;
+            box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.5);
+        }
+        
+        section.tabActive {
+            display: block;
+        }
+        a {
+            text-decoration: none;
+        }
+        #loginFailMsg {
+        display: none;
+        color: red;
+        text-align: center;
+    }
+
+    </style>
+    </head>
+
+        <body>
+            <header>
+                    <h1>Web Clínica</h1>
+            </header>
+            <nav> 
+                <section>
+                    <ul>
+                        <li><button>Home</button></li>
+                        <li><button>Galeria</button></li>
+                        <li><button>Novo Endereço</button></li>
+                        <li><button>Login</button></li>
+                        <li><button>Agendamento</button></li>
+                    </ul>
+                </section>
+            </nav>
+            <main>
+                <div class = "tabs">
+                    <section>
+                        <p>
+                        Apresentamos para você o site Web Clínica, o novo site desenvolvido pelos programadores Kaue Oliveira e Yan
+                        Stivaletti. O principal objetivo desta aplicação é facilitar a comunicação entre paciente e médico, por meio de
+                        agendamentos de consultas e também armazenar e fornecer dados importantes sobre sua saude e bem estar!
+                        </p>
+                        <p>
+                            Como utilizar o site Web Clínica:
+                        </p>
+                        <p>
+                            Para pacientes que desejam fazer consultas, temos no navegador a aba de agendamento, onde poderá marcar consultas por meio do site.
+                            Pode ser feito também o cadastro de novos endereços, temos também uma galeria de fotos que mostra toda nossa estrutura de atendimento físico, comprovando
+                            nossa qualidade e nossos valores como clínica médica
+                        </p>
+                        <p>
+                            Para funcionarios da clínica que desejam obter informações sobre a estrutura e os pacientes cadastrados, basta clicar na aba de login
+                            e registrar-se para que possa acessar todas as informações.
+                        </p>
+                    </section>
+                         
+                    <section class = "galeria">
+                        <h2>Web Clinica - Nossa Estrutura</h2>
+                            
+                                    
+                               
+                                    <p class = "row-md">
+                                        <p class = "col-md-4"><img src="image/Clinica2.jpg"></p>
+                                        <p class = "col-md-4"><img src="image/Clinica3.jpg"></p>
+                                        <p class = "col-md-4"><img src="image/Clinica4.jpg"></p>
+                                        
+                                    </p> 
+                                    <p class = "row-md">
+                                        <p class = "col-md-4"><img src="image/Clinica5.jpg"></p>
+                                        <p class = "col-md-4"><img src="image/Clinica6.jpg"></p>
+                                        <p class = "col-md-4"><img src="image/Clinica7.jpg"></p>
+                                        <p class = "col-md-4"><img src="image/Clinica8.jpg"></p>
+                                        
+                                    </p>
+                                    
+                                    
+                               
+                                
+
+                       
+                
+
+                    </section>
+                    <section>
+                        <h3>Endereço</h3>
+                     <form method = "POST">
+                            <p class = "col-md">
+                                <label for = "cep" class = "form-label">CEP</label>
+                                <input type = "number" name = "cep" class = "form-control" id = "cep">
+                            </p>
+
+                            <p class = "col-md">
+                                <label for = "logadrouro" class = "form-label">Logradouro</label>
+                                <input type = "text" name = "logradouro" class = "form-control" id = "logradouro">
+                            </p>
+
+                            <p class = "col-md">
+                                <label for = "cidade" id = "inputCidade" class = "form-label">Cidade</label>
+                                <input type = "text"  name = "cidade" class = "form-control" id = "cidade">
+                            </p>
+
+                            <p class = "col-md-6">
+                                <label for = "estado" class = "form-label">Estado</label>
+                                <input type = "text"  name = "estado" class = "form-control" id = "estado">
+                                
+                            </p>
+
+                            <p class = "col-12">
+                            
+                                <button type = "submit" class = "btn btn-primary"> Cadastrar</button>
+                            </p>
+                        </form>
+                    </section>
+                    <section>
+                     <h3>Login no Sistema</h3>
+                        <form method="POST" id="Session">
+                            <p class = "col-md">
+                                <label for = "email" class = "form-label">Email:</label>
+                                <input type = "email" id = "email"  class = "form-control" name = "email" autocomplete = "off" required>
+                            </p>
+                            <p class = "col-md">
+                                <label for = "senha" class = "form-label">Senha:</label>
+                                <input type = "password" class = "form-control" id = "senha" name = "senha" required>
+                            </p>
+                             <p id="loginFailMsg">Dados incorretos. Por favor, tente novamente.</p>
+                            <p class = "col-12">
+                            <button  type = "submit" id = "btnLogin" class = "btn btn-primary">Entrar</button>
+                            </p>
+                        </form>
+                    </section>
+                    <section>
+                    
+                        <h3>Agendamento</h3>
+
+                        <form class="row g-3" action = "agenda.php" method = "POST">
+                         <p class = "col-md">
+                            <label for="esp" class = "form-label" >Selecione a especialidade:</label>
+                                <select name="esp" class = "form-control" id="esp" onchange="getEsp()">
+                                    <option value = ""></option>
+                                </select>
+                         </p>
+                         <p class = "col-md">
+                            <label for="medicos" class = "form-label">Medicos disponiveis:</label>
+                                <select name="medicos" class = "form-control" id="medicos" onchange="resetTime()">
+                                </select>
+                         </p>
+                         <p class = "col-md">
+                             <label for="data" class = "form-label">Data da consulta:</label>
+                             <input type = "date" class = "form-control" id = "data" name = "data">
+                        </p>
+                        <p class = "col-md">
+                            <label for="hora" class = "form-label" >Selecione a hora:</label>
+                                <select name="hora" class = "form-control" id="hora">
+                                </select>
+                         </p>
+                        
+                         <p class = "col-md">
+                             <label for="nome" class = "form-label">Nome:</label>
+                             <input type = "nome" class = "form-control" id = "nome" name = "nome">
+                        </p>
+                        <p class = "col-md">
+                                <label for = "inputSex" class = "form-label">Sexo:</label>
+                                <select class = "form-control" name = "sexo" id = "sexo">
+                                    <option>Feminino</option>
+                                    <option>Masculino</option>
+                                    <option>Outro</option>
+                                    <option>Prefiro não comentar</option>
+                                </select>
+                        </p>
+                        <p class = "col-md">
+                             <label for="email" class = "form-label">Email:</label>
+                             <input type = "email" class = "form-control" id = "email" name = "email">
+                        </p>
+                       
+                        <p class = "col-12">
+                            <button  type = "submit" class = "btn btn-primary">Cadastrar</button>
+                        </p>
+                        
+
+
+         
+                        </form>                    
+                    </section>
+
+                </div>
+                
+            </main>
+
+        <script type = "text/javascript">
+
+            let dateObj = document.querySelector("#data");
+            let isSet = false;
+            let olddate=dateObj.value;
+            let isChanged = function(){
+            if(dateObj.value!== olddate){
+                olddate=dateObj.value;
+                return true;
+            };
+            return false;
+            };
+            dateObj.addEventListener("blur", function(){
+                if(isChanged()){
+                    isSet = true;
+                    buscaHorarios(dateObj.value);
+                }
+            });
+            function resetTime(){
+                if(isSet){
+                    buscaHorarios(dateObj.value);
+                }
+            };
+            
+            const btnLogin = document.querySelector("#btnLogin");
+            btnLogin.onclick = myFunction;
+
+            window.onload = function () {
+
+
+                buscaEsp();
+                
+                const inputCep = document.querySelector("#cep");
+                inputCep.onkeyup = () => buscaEndereco(inputCep.value);
+                buttons = document.querySelectorAll("nav button");  // Seleciona todos os botões dentro da barra de navegação
+                for(let button of buttons) {                        
+                    button.addEventListener("click",changeTab);  
+                }
+                openTab(0);
+                
+            }
+            function changeTab(e){                                  // Tem como papel, encontrar a posição do item de lista dentro da lista
+                const botaoAdicionado = e.target;                   // e. da acesso ao objeto que disparou o evento que levou a chamada da função changeTab
+                const liDoBotao = botaoAdicionado.parentNode;       // Recebe o nó pai para depois acessarmos o filho dele
+                const nodes = Array.from(liDoBotao.parentNode.children);
+                const index = nodes.indexOf(liDoBotao);             // pega a posição de Li que queremos mostrar
+                openTab(index);                                     // Abre a Tab da posição "index"
+            }
+            function openTab(i) {
+                const tabActive = document.querySelector(".tabActive");     //Busca a Tab que esta ativo e a torna invisivel
+                if(tabActive !== null)
+                    tabActive.className = "";
+                
+                const  buttonActive = document.querySelector(".buttonActive"); //Busca o botão que esta ativo e a torna invisivel
+                if(buttonActive !== null)
+                    buttonActive.className = ""; 
+                
+                document.querySelectorAll(".tabs section")[i].className = "tabActive"; // ativa a Tab desejada
+                document.querySelectorAll("nav button")[i].className = "buttonActive"; // ativa o botão desejado
+            }
+           
+            function myFunction() {
+
+                var email = document.getElementById("email");
+                var senha = document.getElementById("senha");
+                if (!email.checkValidity() || !senha.checkValidity()) {
+                    document.getElementById("message")
+                              .innerHTML = inpObj.validationMessage;
+                }
+           
+             
+            }
+            function buscaEndereco(cep) {
+      
+                if (cep.length != 9) return;      
+                let form = document.querySelector("form");
+                
+                fetch("AJAXEndereco.php?cep=" + cep)
+                    .then(response => {
+                    if (!response.ok) {
+                        throw new Error(response.status);
+                    }
+                    return response.json();
+                    })
+                    .then(endereco => {
+                    form.logradouro.value = endereco.logradouro;
+                    form.cidade.value = endereco.cidade;
+                    form.estado.value = endereco.estado;
+                    })
+                    .catch(error => {
+                    form.reset();
+                    console.error('Falha inesperada: ' + error);
+                    });
+                    }
+            function buscaEsp() {
+                if(isSet){
+                    buscaHorarios(dateObj.value);
+                }
+
+            let xhr = new XMLHttpRequest();
+                xhr.open("GET", "buscaEspBD.php?", true);
+
+                xhr.onload = function () {
+                
+                // verifica o código de status retornado pelo servidor
+                if (xhr.status != 200) {
+                    console.error("Falha inesperada: " + xhr.responseText);
+                    return;
+                }
+
+                // converte a string JSON para objeto JavaScript
+                try {
+                    var especialidades = JSON.parse(xhr.responseText);
+                    var campoSelect = document.getElementById("esp");
+                    while (campoSelect.firstChild) {
+                        campoSelect.removeChild(campoSelect.lastChild);
+                    }
+                    console.log(especialidades);
+                    var option = document.createElement("option");
+                    option.text = ""
+                    option.value = ""
+                    campoSelect.add(option);
+                    especialidades.forEach(element => {
+                        var option = document.createElement("option");
+                        option.text = element.especialidade 
+                        option.value = element.especialidade
+                        campoSelect.add(option);
+                    });
+                }
+                catch (e) {
+                    console.error("String JSON inválida: " + xhr.responseText);
+                    return;
+                }
+
+                }
+
+                xhr.onerror = function () {
+                console.error("Erro de rede - requisição não finalizada");
+                };
+
+                xhr.send();
+            }
+            function buscaMedicos(esp) {
+
+                let xhr = new XMLHttpRequest();
+                console.log(esp);
+                xhr.open("GET", "buscaMedBD.php?esp=" + esp, true);
+
+                xhr.onload = function () {
+                
+                // verifica o código de status retornado pelo servidor
+                if (xhr.status != 200) {
+                    console.error("Falha inesperada: " + xhr.responseText);
+                    return;
+                }
+
+                // converte a string JSON para objeto JavaScript
+                try {
+                    var medicos = JSON.parse(xhr.responseText);
+                    var campoSelect = document.getElementById("medicos");
+                    while (campoSelect.firstChild) {
+                        campoSelect.removeChild(campoSelect.lastChild);
+                    }
+                    console.log(medicos);
+                    medicos.forEach(element => {
+                        var option = document.createElement("option");
+                        option.text = element.nome;
+                        option.value = element.codigo;
+                        campoSelect.add(option);
+                    });
+                }
+                catch (e) {
+                    console.error("String JSON inválida: " + xhr.responseText);
+                    return;
+                }
+
+                }
+
+                xhr.onerror = function () {
+                console.error("Erro de rede - requisição não finalizada");
+                };
+
+                xhr.send();
+            }
+            function getEsp() {
+                var campoSelect = document.getElementById("esp");
+                buscaMedicos(campoSelect.value);
+                }
+            function buscaHorarios(data) {
+
+                let xhr = new XMLHttpRequest();
+                var med = document.getElementById("medicos").value;
+                xhr.open("GET", "buscaHorBD.php?data=" + data +"&med=" + med, true);
+                console.log(data);
+
+                xhr.onload = function () {
+
+                // verifica o código de status retornado pelo servidor
+                if (xhr.status != 200) {
+                    console.error("Falha inesperada: " + xhr.responseText);
+                    return;
+                }
+
+                // converte a string JSON para objeto JavaScript
+                try {
+                    var hora = JSON.parse(xhr.responseText);
+                    console.log(hora);
+                    var campoSelect = document.getElementById("hora");
+                    while (campoSelect.firstChild) {
+                        campoSelect.removeChild(campoSelect.lastChild);
+                    }
+
+                    for (i = 8; i <= 17; i++) {
+                        if(!hora.includes(i.toString())){
+                            var option = document.createElement("option");
+                            option.text = i.toString() + "h";
+                            option.value = i;
+                            campoSelect.add(option);
+                        }
+                    }
+                }
+                catch (e) {
+                    console.error("String JSON inválida: " + xhr.responseText);
+                    return;
+                }
+
+                }
+
+                xhr.onerror = function () {
+                console.error("Erro de rede - requisição não finalizada");
+                };
+
+                xhr.send();
+            }
+            let botao = document.querySelector("#btnLogin");
+            botao.addEventListener('click', enviaForm);
+
+             function enviaForm(evento) {
+                 
+                 evento.preventDefault();
+
+                let xhr = new XMLHttpRequest();
+                xhr.open("POST","login.php");
+                xhr.onload = function () {
+        
+                    if (xhr.status != 200) {
+                    console.error("Falha inesperada: " + xhr.responseText);
+                    return;
+                    }
+                    try {
+                    var response = JSON.parse(xhr.responseText);
+                    
+                    }
+                    catch (e) {
+                    console.error("String JSON inválida: " + xhr.responseText);
+                    return;
+                    }
+
+                    if (response.success)
+                    window.location = response.detail;
+                    else {
+                    document.querySelector("#loginFailMsg").style.display = 'block';
+                    let senha = document.querySelector("#senha")
+                    senha.value = "";
+                    senha.focus();
+                    }
+                }
+
+                xhr.onerror = function () {
+                    console.error("Erro de rede - requisição não finalizada");
+                };
+
+                const form = document.querySelector("#Session");
+                xhr.send(new FormData(form));
+                }
+
+
+                        
+                        
+        </script>
+        </body>
+
+</html>

@@ -1,0 +1,90 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel  = "stylesheet" type = "text/css" href = "style.css" >
+    <style>
+        .modal {
+        display:none;
+        background-color: black;
+        width: 100%;
+        height: 100%;
+
+        position:fixed;
+        top:0;
+        left: 0;
+
+        overflow:  auto;
+        z-index:1;
+    }
+    .modalContent {
+        background-color: aliceblue;
+        margin: auto;
+        padding: 20px;
+        padding:20px;
+        border:0.5px solid #aaa;
+        box-shadow: 0 0 5px #333;
+
+        width: 50%;
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    </style>
+    <title>Exercicio 1</title>
+  </head>
+  <body>
+    
+    <main>
+        <header>Faculdade de Computação da UFU</header>
+        <div>
+
+        <div class = "descricao"> 
+            <h2>A FACOM</h2>
+            <p> A Faculdade de Computação (FACOM) da Universidade Federal de Uberlandia foi criada em 2000,
+            a partir do extinto Departamento de Informatica (DEINF), criado em 1988, no ambito do CETEC.</p>
+            <p></p>
+
+            <p> No inicio dos anos 2000 foi criado na Faculdade o Programa de Pós-Graduação
+                em Ciencia da Computação.</p>
+
+            <h3>Cursos de Graduação</h3>
+
+            <p> A FACOM oferece os cursos de bacharelado em Ciencia da Computação, em Uberlandia,
+                e Bacharelado em Sistemas de Informaçãom, em Uberlandia e Monte Carmelo.
+            </p>
+
+            <h3>  Cursos de Pós-Graduação</h3>
+
+            <p> A FACOM oferece também os cursos de Mestrado Academico e Doutoradi em Ciencia da Computação. </p> 
+
+            <button type = "button" id = "btnOpenModal"> Abrir Modal</button>
+    </main>
+        </div> 
+        </div>
+        <div id = "modalTeste" class = "modal">
+
+        <div class = "modalContent">
+        <h2> Ola! Seja Bem Vindo!</h2>
+        <button class = "buttonClose">OK</button>
+        </div>
+        
+        </div>
+        <script type="text/javascript">
+
+           window.onload = function () {
+                const modal = document.querySelector(".modal");
+                const buttonClose = modal.querySelector(".buttonClose");
+
+                buttonClose.addEventListener("click",function () {
+                    modal.style.display = 'none';
+                });
+
+                const  buttonOpenModal = document.getElementById("btnOpenModal");
+                buttonOpenModal.addEventListener("click",function () {
+                    modal.style.display = 'block';
+                })
+            }
+        </script>
+  </body>
+</html>

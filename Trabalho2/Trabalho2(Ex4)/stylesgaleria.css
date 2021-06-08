@@ -1,0 +1,34 @@
+* { 
+    background-color: palevioletred;
+}
+
+.imagens {
+    font-family: Helvetica;
+    background-color:palevioletred;
+    width: 1200px; 
+    padding: 2rem;
+    float: left;
+    border-radius: 10px;
+    table-layout: auto;
+    width: 100px;
+}
+
+iframe {
+    
+    max-height: 150px;
+    max-width: 200px;
+    width: 350px;
+    height: 350px;
+    margin: 25px;
+    border-radius: 10px;
+}
+.video {
+    float: right;
+    height: 100%;
+}
+a {
+	text-decoration: none;
+	color:#FFFF;
+    align-items: center;
+
+}

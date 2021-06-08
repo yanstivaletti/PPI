@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Questão 4</title>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+
+  <h3>Busca instantânea por veículo</h3>
+  <div>
+    <label for="id">Informe o ID do veículo (número de 1 a 3): </label>
+    <input type="text" id="id" name="id">
+  </div>
+
+  <h3>Dados do veículo encontrado:</h3>
+  <div>
+    <p>Tipo: <span id="spanTipo"></span></p>
+    <p>Marca: <span id="spanMarca"></span></p>
+    <p>Modelo: <span id="spanModelo"></span></p>
+  </div>
+
+  <script>
+
+    function buscaVeiculo(id) {
+
+      let xhr = new XMLHttpRequest();
+      xhr.open("GET", "questao3.php?id=" + id, true);
+
+      xhr.onload = function () {
+        if (xhr.status != 200) {
+          console.error("Falha inesperada: " + xhr.responseText);
+          return;
+        }
+        try {
+          var endereco = JSON.parse(xhr.responseText);
+        }
+        catch (e) {
+          console.error("String JSON inválida: " + xhr.responseText);
+          return;
+        }
+
+        document.getElementById("spanTipo").innerHTML=veiculo.tipo;
+        document.getElementById("spanMarca").innerHTML=veiculo.marca;
+        document.getElementById("spanModelo").innerHTML= veiculo.modelo;
+      }
+
+      xhr.onerror = function () {
+        console.error("Erro de rede - requisição não finalizada");
+      };
+
+      xhr.send();
+    }
+
+    window.onload = function () {
+      const inputId= document.querySelector("id");
+      InputId.onkeyup = () => buscaVeiculo(InputId.value);
+    }
+
+
+  </script>
+
+</body>
+
+</html>
